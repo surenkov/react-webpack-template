@@ -17,14 +17,27 @@ module.exports = {
     },
   },
 
-  plugins: ['react'],
-  extends: ['plugin:react/recommended', 'airbnb-base'],
+  plugins: [
+    'flowtype',
+    'react',
+  ],
+
+  extends: [
+    'plugin:flowtype/recommended',
+    'plugin:react/recommended',
+    'airbnb-base',
+  ],
 
   settings: {
     'import/resolver': {
       webpack: {
-        config: 'webpack.config.babel.js',
+        config: 'build/webpack.base.conf.js'
       },
     },
+  },
+
+  rules: {
+    'no-confusing-arrow': ['error', { allowParens: true }],
+    'import/extensions': ['error', 'always', { js: 'never', jsx: 'never' }],
   },
 };

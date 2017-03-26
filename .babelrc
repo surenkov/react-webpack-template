@@ -2,7 +2,12 @@
   "presets": [
     ["env", {
       "targets": {
-        "browsers": ["last 2 versions", "safari >= 9", "ie >= 11"]
+        "browsers": [
+          "last 2 versions",
+          "safari >= 9",
+          "ie >= 11"
+        ],
+        "node": "current"
       },
       "useBuiltIns": true,
       "loose": true,
@@ -11,6 +16,7 @@
   ],
   "plugins": [
     "transform-object-rest-spread",
+    "transform-flow-strip-types",
     "transform-react-jsx",
     "react-hot-loader/babel"
   ],
