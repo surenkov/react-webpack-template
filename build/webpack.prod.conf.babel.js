@@ -4,11 +4,17 @@ const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const baseWebpackConfig = require('./webpack.base.conf.js');
+const baseWebpackConfig = require('./webpack.base.conf');
 const commons = require('./commons');
 const utils = require('./utils');
 
-module.exports = merge(baseWebpackConfig, {
+module.exports = merge({
+  entry: {
+    app: [
+      'babel-polyfill',
+    ],
+  },
+
   devtool: '#cheap-module-source-map',
 
   module: {
@@ -67,4 +73,4 @@ module.exports = merge(baseWebpackConfig, {
       chunks: ['vendor'],
     }),
   ],
-});
+}, baseWebpackConfig);

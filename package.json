@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --hot --info -d --config build/webpack.dev.conf.babel.js",
-    "build": "npm run clean && NODE_ENV=production webpack --progress -p --config build/webpack.prod.conf.babel.js",
-    "clean": "rm -rf ./dist",
-    "lint": "eslint --ext .js,.jsx src"
+    "build": "rm -rf ./dist && NODE_ENV=production webpack --progress -p --config build/webpack.prod.conf.babel.js",
+    "lint": "eslint --ext .js,.jsx ./src",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "dependencies": {
     "lodash": "^4.17.4",
@@ -26,11 +26,11 @@
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.2.1",
     "babel-loader": "^6.4.1",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.2.2",
+    "babel-preset-flow": "^6.23.0",
     "babel-register": "^6.24.0",
     "css-loader": "^0.27.3",
     "eslint": "^3.18.0",

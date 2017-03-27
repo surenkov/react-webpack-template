@@ -34,6 +34,9 @@ module.exports = {
         config: 'build/webpack.base.conf.js'
       },
     },
+    flowtype: {
+      onlyFilesWithFlowAnnotation: true,
+    },
   },
 
   rules: {

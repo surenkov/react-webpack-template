@@ -6,16 +6,11 @@ const projectRoot = path.resolve(__dirname, '../');
 
 module.exports = {
   entry: {
-    app: [
-      'babel-polyfill',
-      './src',
-    ],
+    app: ['./src'],
   },
 
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '/',
-    filename: '[name].[hash:7].js',
   },
 
   resolve: {
@@ -23,6 +18,7 @@ module.exports = {
     modules: [path.join(projectRoot, 'node_modules')],
     alias: {
       src: path.join(projectRoot, 'src'),
+      components: path.join(projectRoot, 'src/components'),
     },
   },
 

@@ -10,7 +10,13 @@ const commons = require('./commons');
 const baseWebpackConfig = require('./webpack.base.conf');
 
 
-module.exports = merge(baseWebpackConfig, {
+module.exports = merge({
+  entry: {
+    app: [
+      'react-hot-loader/patch',
+    ],
+  },
+
   devtool: '#eval-source-map',
 
   module: {
@@ -28,6 +34,8 @@ module.exports = merge(baseWebpackConfig, {
 
   output: {
     publicPath: '/',
+    filename: 'js/[name].[chunkhash].js',
+    chunkFilename: 'js/[id].[chunkhash].js',
   },
 
   plugins: [
@@ -48,4 +56,4 @@ module.exports = merge(baseWebpackConfig, {
     new webpack.NamedModulesPlugin(),
     new FriendlyErrors(),
   ],
-});
+}, baseWebpackConfig);

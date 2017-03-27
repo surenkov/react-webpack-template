@@ -1,5 +1,6 @@
 {
   "presets": [
+    "flow",
     ["env", {
       "targets": {
         "browsers": [
@@ -16,9 +17,9 @@
   ],
   "plugins": [
     "transform-object-rest-spread",
-    "transform-flow-strip-types",
     "transform-react-jsx",
     "react-hot-loader/babel"
   ],
-  "comments": false
+  "comments": false,
+  "sourceMaps": "inline"
 }
