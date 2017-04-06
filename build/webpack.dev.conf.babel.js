@@ -34,8 +34,8 @@ module.exports = merge({
 
   output: {
     publicPath: '/',
-    filename: 'js/[name].[chunkhash].js',
-    chunkFilename: 'js/[id].[chunkhash].js',
+    filename: 'js/[name].[hash].js',
+    chunkFilename: 'js/[id].[hash].js',
   },
 
   plugins: [
