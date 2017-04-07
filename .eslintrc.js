@@ -19,13 +19,14 @@ module.exports = {
 
   plugins: [
     'flowtype',
+    'jsx-a11y',
     'react',
   ],
 
   extends: [
     'plugin:flowtype/recommended',
     'plugin:react/recommended',
-    'airbnb-base',
+    'airbnb',
   ],
 
   settings: {
