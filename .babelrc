@@ -16,10 +16,10 @@
     }]
   ],
   "plugins": [
+    "react-hot-loader/babel",
     "transform-object-rest-spread",
     "transform-class-properties",
-    "transform-react-jsx",
-    "react-hot-loader/babel"
+    "transform-react-jsx"
   ],
   "comments": false,
   "sourceMaps": "inline"

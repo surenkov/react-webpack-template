@@ -15,7 +15,7 @@ module.exports = merge({
     ],
   },
 
-  devtool: '#cheap-module-source-map',
+  devtool: 'cheap-module-source-map',
 
   module: {
     rules: utils.styleLoaders({
