@@ -2,7 +2,7 @@
 node_modules/
 .idea/
 flow-typed/
-!flow-typed/default
+!flow-typed/default/*
 .vsode/
 *.iml
 dist/

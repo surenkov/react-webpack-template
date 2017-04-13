@@ -25,7 +25,7 @@ const cssLoaders = (options) => {
         use: sourceLoader,
       });
     }
-    sourceLoader.splice(0, 0, { loader: 'vue-style-loader' });
+    sourceLoader.splice(0, 0, { loader: 'style-loader' });
     return sourceLoader;
   }
 
