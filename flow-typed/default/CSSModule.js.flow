@@ -1,3 +1,5 @@
 // @flow
 
-declare export default string;
+declare module CSSModule {
+  declare var exports: { [key: string]: string };
+}

@@ -5,30 +5,33 @@
 [libs]
 
 [options]
-module.name_mapper.extension='css' -> '<PROJECT_ROOT>/flow-typed/flow/CSSModule.js.flow'
-module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/flow-typed/flow/CSSModule.js.flow'
-module.name_mapper.extension='postcss' -> '<PROJECT_ROOT>/flow-typed/flow/CSSModule.js.flow'
-module.name_mapper.extension='sass' -> '<PROJECT_ROOT>/flow-typed/flow/CSSModule.js.flow'
-module.name_mapper.extension='less' -> '<PROJECT_ROOT>/flow-typed/flow/CSSModule.js.flow'
-module.name_mapper.extension='styl' -> '<PROJECT_ROOT>/flow-typed/flow/CSSModule.js.flow'
-module.name_mapper.extension='stylus' -> '<PROJECT_ROOT>/flow-typed/flow/CSSModule.js.flow'
+module.name_mapper.extension='css' -> 'CSSModule'
+module.name_mapper.extension='scss' -> 'CSSModule'
+module.name_mapper.extension='postcss' -> 'CSSModule'
+module.name_mapper.extension='sass' -> 'CSSModule'
+module.name_mapper.extension='less' -> 'CSSModule'
+module.name_mapper.extension='styl' -> 'CSSModule'
+module.name_mapper.extension='stylus' -> 'CSSModule'
 
-module.name_mapper.extension='png' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
-module.name_mapper.extension='jpg' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
-module.name_mapper.extension='jpeg' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
-module.name_mapper.extension='gif' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
-module.name_mapper.extension='svg' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
+module.name_mapper.extension='png' -> 'WebpackAsset'
+module.name_mapper.extension='jpg' -> 'WebpackAsset'
+module.name_mapper.extension='jpeg' -> 'WebpackAsset'
+module.name_mapper.extension='gif' -> 'WebpackAsset'
+module.name_mapper.extension='svg' -> 'WebpackAsset'
 
-module.name_mapper.extension='woff' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
-module.name_mapper.extension='woff2' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
-module.name_mapper.extension='eot' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
-module.name_mapper.extension='ttf' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
-module.name_mapper.extension='otf' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
+module.name_mapper.extension='woff' -> 'WebpackAsset'
+module.name_mapper.extension='woff2' -> 'WebpackAsset'
+module.name_mapper.extension='eot' -> 'WebpackAsset'
+module.name_mapper.extension='ttf' -> 'WebpackAsset'
+module.name_mapper.extension='otf' -> 'WebpackAsset'
 
-module.name_mapper.extension='html' -> '<PROJECT_ROOT>/flow-typed/flow/WebpackAsset.js.flow'
+module.name_mapper.extension='html' -> 'WebpackAsset'
 
 esproposal.class_static_fields=enable
 esproposal.class_instance_fields=enable
 
 suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe
 suppress_comment=\\(.\\|\n\\)*\\$FlowIssue
+
+module.system=haste
+strip_root=true

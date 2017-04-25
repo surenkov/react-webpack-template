@@ -1,3 +1,6 @@
 // @flow
 
-declare export default { [key: string]: string }
+declare module WebpackAssets {
+  declare var exports: string;
+}
+
