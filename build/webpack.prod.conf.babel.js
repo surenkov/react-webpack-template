@@ -20,7 +20,6 @@ module.exports = merge({
   module: {
     rules: utils.styleLoaders({
       sourceMap: true,
-      modules: true,
       extract: true,
     }),
   },

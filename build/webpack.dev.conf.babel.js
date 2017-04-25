@@ -20,7 +20,7 @@ module.exports = merge({
   devtool: 'eval-source-map',
 
   module: {
-    rules: utils.styleLoaders({ sourceMap: true, modules: true }),
+    rules: utils.styleLoaders({ sourceMap: true }),
   },
 
   devServer: {

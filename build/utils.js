@@ -29,19 +29,20 @@ const cssLoaders = (options) => {
     return sourceLoader;
   }
 
+  const css = ['css', { modules: true }];
   return {
-    css: generateLoaders(['css', 'postcss']),
-    postcss: generateLoaders(['css', 'postcss']),
-    less: generateLoaders(['css', 'postcss', 'less']),
-    sass: generateLoaders(['css', 'postcss', ['sass', {
+    css: generateLoaders([css, 'postcss']),
+    postcss: generateLoaders([css, 'postcss']),
+    less: generateLoaders([css, 'postcss', 'less']),
+    sass: generateLoaders([css, 'postcss', ['sass', {
       indentedSyntax: true,
       includePaths: [path.resolve(__dirname, '../')],
     }]]),
-    scss: generateLoaders(['css', 'postcss', ['sass', {
+    scss: generateLoaders([css, 'postcss', ['sass', {
       includePaths: [path.resolve(__dirname, '../')],
     }]]),
-    stylus: generateLoaders(['css', 'postcss', 'stylus']),
-    styl: generateLoaders(['css', 'postcss', 'stylus']),
+    stylus: generateLoaders([css, 'postcss', 'stylus']),
+    styl: generateLoaders([css, 'postcss', 'stylus']),
   };
 };
 
