@@ -1,37 +1,44 @@
 [ignore]
 
 [include]
+./src/*
 
 [libs]
 
 [options]
-module.name_mapper.extension='css' -> 'CSSModule'
-module.name_mapper.extension='scss' -> 'CSSModule'
-module.name_mapper.extension='postcss' -> 'CSSModule'
-module.name_mapper.extension='sass' -> 'CSSModule'
-module.name_mapper.extension='less' -> 'CSSModule'
-module.name_mapper.extension='styl' -> 'CSSModule'
-module.name_mapper.extension='stylus' -> 'CSSModule'
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.es
+module.file_ext=.es6
+module.file_ext=.css
+module.file_ext=.scss
+module.file_ext=.sass
+module.file_ext=.less
+module.file_ext=.postcss
+module.file_ext=.styl
+module.file_ext=.stylus
 
-module.name_mapper.extension='png' -> 'WebpackAsset'
-module.name_mapper.extension='jpg' -> 'WebpackAsset'
-module.name_mapper.extension='jpeg' -> 'WebpackAsset'
-module.name_mapper.extension='gif' -> 'WebpackAsset'
-module.name_mapper.extension='svg' -> 'WebpackAsset'
+module.file_ext=.png
+module.file_ext=.jpg
+module.file_ext=.jpeg
+module.file_ext=.gif
+module.file_ext=.svg
 
-module.name_mapper.extension='woff' -> 'WebpackAsset'
-module.name_mapper.extension='woff2' -> 'WebpackAsset'
-module.name_mapper.extension='eot' -> 'WebpackAsset'
-module.name_mapper.extension='ttf' -> 'WebpackAsset'
-module.name_mapper.extension='otf' -> 'WebpackAsset'
+module.file_ext=.woff
+module.file_ext=.woff2
+module.file_ext=.eot
+module.file_ext=.ttf
+module.file_ext=.otf
 
-module.name_mapper.extension='html' -> 'WebpackAsset'
+module.name_mapper='\.\(\(s?[ca]|postc|le\)ss|styl\(us\)?\)$' -> '<PROJECT_ROOT>/flow-typed/default/CSSModule.js.flow'
+module.name_mapper='\.\(png|jpe?g|gif|svg\)$' -> '<PROJECT_ROOT>/flow-typed/default/WebpackAsset.js.flow'
+module.name_mapper='\.\(woff2?|eot|[to]tf\)$' -> '<PROJECT_ROOT>/flow-typed/default/WebpackAsset.js.flow'
+module.name_mapper.extension='html' -> '<PROJECT_ROOT>/flow-typed/default/WebpackAsset.js.flow'
 
 esproposal.class_static_fields=enable
 esproposal.class_instance_fields=enable
+munge_underscores=true
 
-suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe
-suppress_comment=\\(.\\|\n\\)*\\$FlowIssue
-
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
 module.system=haste
-strip_root=true
