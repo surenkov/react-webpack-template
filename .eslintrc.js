@@ -17,7 +17,7 @@ module.exports = {
     },
   },
 
-  plugins: ['flowtype', 'flow-vars'],
+  plugins: ['flowtype'],
 
   extends: [
     'airbnb',
