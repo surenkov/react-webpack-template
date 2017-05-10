@@ -36,8 +36,6 @@ module.exports = {
   },
 
   rules: {
-    'flow-vars/define-flow-type': 1,
-    'flow-vars/use-flow-type': 1,
     'no-confusing-arrow': ['error', { allowParens: true }],
     'import/extensions': ['error', 'always', { js: 'never', jsx: 'never' }],
     'quote-props': ['error', 'as-needed', { numbers: true }],
