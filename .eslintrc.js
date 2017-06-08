@@ -45,6 +45,11 @@ module.exports = {
       args: 'after-used',
       ignoreRestSiblings: false,
     }],
+    'react/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
+    'react/jsx-closing-bracket-location': [1, {
+      selfClosing: 'after-props',
+      nonEmpty: 'tag-aligned',
+    }],
     'jsx-a11y/no-static-element-interactions': 0,
     'react/no-unused-prop-types': 0,
   },
